@@ -14,8 +14,6 @@ public class MapManager {
 	TileManager tm;
 	Cursor cursor;
 	boolean lockOn = false;
-
-
 	
 	MapManager(OrthographicCamera cam) {
 		em = new EntityManager(cam);
@@ -48,12 +46,15 @@ public class MapManager {
 		}
 
 		if (lockOn) {
-			cam.position.x = cursor.wPos.x;
-			cam.position.y = cursor.wPos.y;
+			Vector2 desired = cursor.wPos;
+			desired.sub(cam.position.x,cam.position.y);
+			cam.translate(desired);
+			
 		}
 
 		if (Gdx.input.isKeyJustPressed(Keys.SPACE)) {
 			for (Entity entity : em.enlist) {
+				entity.color = Color.WHITE;
 				if (entity.x == cursor.x && entity.y == cursor.y) {
 					entity.color = Color.RED;
 				}
