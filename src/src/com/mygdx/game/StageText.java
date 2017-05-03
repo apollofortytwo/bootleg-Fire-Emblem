@@ -19,6 +19,5 @@ public class StageText {
 		sb.append(text);
 		
 		label.setText(sb);
-		sb.setLength(0);
 	}
 }

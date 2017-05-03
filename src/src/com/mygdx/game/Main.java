@@ -29,12 +29,11 @@ public class Main implements ApplicationListener {
 		cam.position.set(cam.viewportWidth / 2, cam.viewportHeight / 2, 0);
 
 		stage = new Stage();
-		
-
 
 		container = new VerticalGroup().reverse();
 		container.setPosition(0, Gdx.graphics.getHeight());
 		container.left();
+		
 		
 		stage.addActor(container);
 		

@@ -3,6 +3,9 @@ package src.com.mygdx.game;
 import java.util.HashMap;
 
 public class InputHandler {
+	/**
+	 * DYNAMIC DATA STRUCTURE EXIST HERE!!!!
+	 */
 	private static HashMap<String, Boolean> keyPressed = new HashMap<String, Boolean>();
 	
 	public static HashMap<String, Boolean> getKeyPressed() {

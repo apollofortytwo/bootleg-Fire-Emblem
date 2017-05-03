@@ -16,6 +16,14 @@ public class CameraController implements InputProcessor {
 	}
 
 	public void update() {
+		handleInputs();
+	}
+	
+	/**
+	 * moves the camera around with the WASD keys
+	 * zooms in and out with the scroll wheel
+	 */
+	public void handleInputs(){
 		if (InputHandler.checkKey("W")) {
 			cam.translate(0, speed);
 		}
